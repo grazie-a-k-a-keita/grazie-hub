@@ -2,10 +2,9 @@ import { getArticleBySlug, getArticles, getAuthorById } from '@/lib/newt';
 import { format } from 'date-fns';
 import type { Metadata } from 'next';
 
-import { AppConfig } from '@/app.config';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
-import { SiX } from '@icons-pack/react-simple-icons';
+import { SiFacebook, SiLine, SiX } from '@icons-pack/react-simple-icons';
 
 export async function generateStaticParams() {
   const articles = await getArticles();
@@ -26,7 +25,14 @@ export async function generateMetadata({
   return {
     title: article?.title,
     description: article?.meta.description ?? 'Grazieのブログ',
-    openGraph: { images: [{ url: article?.meta?.ogImage?.src ?? '' }] },
+    openGraph: {
+      type: 'website',
+      url: `${process.env.NEXT_PUBLIC_URL}/articles/${article?.slug}`,
+      title: article?.meta.title,
+      description: article?.meta.description,
+      siteName: 'Grazie',
+      images: [{ url: article?.meta?.ogImage?.src ?? '' }],
+    },
   };
 }
 
@@ -41,11 +47,28 @@ export default async function Page({ params }: { params: { slug: string } }) {
   return (
     <div className='grid grid-cols-5 gap-4'>
       <div className='mt-16 flex justify-end'>
-        <Button asChild size='icon' variant='ghost'>
-          <a href={AppConfig.xUrl} target='_blank'>
-            <SiX size={20} />
-          </a>
-        </Button>
+        <div className='flex flex-col gap-4'>
+          <Button asChild size='icon' variant='ghost'>
+            <a
+              href={encodeURI(
+                `https://twitter.com/intent/tweet?url=${process.env.NEXT_PUBLIC_URL}/articles/${article.slug}&text=${article.title} | Grazie&hashtags=grazie`,
+              )}
+              target='_blank'
+            >
+              <SiX color='default' size={20} />
+            </a>
+          </Button>
+          <Button asChild size='icon' variant='ghost'>
+            <a href=''>
+              <SiFacebook color='default' size={20} />
+            </a>
+          </Button>
+          <Button asChild size='icon' variant='ghost'>
+            <a href=''>
+              <SiLine color='default' size={20} />
+            </a>
+          </Button>
+        </div>
       </div>
       <article className='col-span-3'>
         <div className='prose mx-auto my-8'>

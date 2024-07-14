@@ -2,7 +2,7 @@ import { Separator } from '@/components/ui/separator';
 
 export default function NotFound() {
   return (
-    <div className='mt-32 flex h-12 justify-center space-x-4'>
+    <div className='mt-32 flex h-12 justify-center space-x-6'>
       <div className='flex items-center'>
         <p className='font-semibold'>404</p>
       </div>

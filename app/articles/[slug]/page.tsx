@@ -51,7 +51,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
           <Button asChild size='icon' variant='ghost'>
             <a
               href={encodeURI(
-                `https://twitter.com/intent/tweet?url=${process.env.NEXT_PUBLIC_URL}/articles/${article.slug}&text=${article.title} | Grazie&hashtags=grazie`,
+                `https://twitter.com/intent/tweet?url=${process.env.NEXT_PUBLIC_VERCEL_URL}/articles/${article.slug}&text=${article.title} | Grazie&hashtags=grazie`,
               )}
               target='_blank'
             >

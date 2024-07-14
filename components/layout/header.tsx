@@ -1,8 +1,9 @@
 'use client';
 
-import { Atom, Mails } from 'lucide-react';
+import { Mails } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { Button } from '../ui/button';
@@ -29,8 +30,8 @@ export default function Header() {
         <div className='flex items-center'>
           <Button asChild className='mr-6' variant='ghost'>
             <Link href='/'>
-              <Atom className='mr-2 size-6 text-primary' />
-              <p className='text-lg font-bold'>Grazie</p>
+              <Image alt='logo' className='mr-2' height={24} src='/logo.svg' width={24} />
+              <p className='text-lg font-bold text-primary'>Grazie</p>
             </Link>
           </Button>
           <ul className='flex space-x-6'>
@@ -60,7 +61,7 @@ export default function Header() {
         <div className='flex items-center'>
           <Button asChild variant='outline'>
             <Link href='/contact'>
-              <Mails className='mr-2 size-6 text-primary' />
+              <Mails className='mr-2 size-6 text-secondary-foreground' />
               お問い合わせ
             </Link>
           </Button>

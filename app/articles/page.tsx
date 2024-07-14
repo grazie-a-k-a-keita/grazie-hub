@@ -85,7 +85,7 @@ export default async function Page({
                   src={article.coverImage.src}
                 />
               </div>
-              <Badge className='mb-2' variant='secondary'>
+              <Badge className='mb-2' variant='outline'>
                 {article.tag.name}
               </Badge>
               <h2 className='mb-2 line-clamp-1 font-semibold'>

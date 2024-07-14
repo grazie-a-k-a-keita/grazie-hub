@@ -44,6 +44,8 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
   const author = await getAuthorById(article.author._id);
 
+  console.log(process.env.NEXT_PUBLIC_VERCEL_URL);
+
   return (
     <div className='grid grid-cols-5 gap-4'>
       <div className='mt-16 flex justify-end'>

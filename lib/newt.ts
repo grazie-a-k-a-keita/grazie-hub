@@ -68,7 +68,6 @@ export const getArticleBySlug = cache(async (slug: string) => {
       select: ['_id', '_sys', 'title', 'slug', 'meta', 'body', 'coverImage', 'author', 'tag'],
     },
   });
-  console.log(article);
   return article;
 });
 

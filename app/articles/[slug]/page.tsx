@@ -27,7 +27,7 @@ export async function generateMetadata({
     description: article?.meta.description ?? 'Grazieのブログ',
     openGraph: {
       type: 'website',
-      url: `${process.env.NEXT_PUBLIC_URL}/articles/${article?.slug}`,
+      url: `${process.env.NEXT_PUBLIC_VERCEL_URL}/articles/${article?.slug}`,
       title: article?.meta.title,
       description: article?.meta.description,
       siteName: 'Grazie',

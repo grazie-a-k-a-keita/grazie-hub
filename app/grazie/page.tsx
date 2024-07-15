@@ -16,7 +16,7 @@ export default function Page() {
   }, []);
 
   return (
-    <div className='flex flex-col'>
+    <div className='mb-16 flex flex-col'>
       <div className='flex justify-center'>
         <SvgGrazie />
       </div>

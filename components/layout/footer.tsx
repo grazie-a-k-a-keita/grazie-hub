@@ -24,7 +24,7 @@ export default function Footer() {
           </Link>
         </li>
         <li className='flex items-center'>
-          <Link className='transition duration-200 hover:opacity-60' href='/articles'>
+          <Link className='transition duration-200 hover:opacity-60' href='/contact'>
             <p className='text-sm font-semibold'>お問い合わせ</p>
           </Link>
         </li>

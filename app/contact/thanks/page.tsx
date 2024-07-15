@@ -8,7 +8,7 @@ export default function Thanks() {
   const router = useRouter();
 
   return (
-    <div className='mt-32 flex flex-col space-y-6'>
+    <div className='mb-16 mt-32 flex flex-col space-y-6'>
       <div className='flex justify-center'>
         <CircleCheck className='size-12' />
       </div>

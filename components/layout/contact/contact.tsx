@@ -120,7 +120,7 @@ export default function Contact() {
   return (
     <>
       <Form {...form}>
-        <form className='mb-4 space-y-6' onSubmit={form.handleSubmit(onSubmit)}>
+        <form className='mb-16 space-y-6' onSubmit={form.handleSubmit(onSubmit)}>
           <FormField
             control={form.control}
             name='name'

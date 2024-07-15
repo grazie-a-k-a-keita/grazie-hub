@@ -13,9 +13,7 @@ export default function Error() {
         <CircleAlert className='size-12' />
       </div>
       <h1 className='text-center text-2xl font-semibold'>Error</h1>
-      <p className='text-center font-semibold text-muted-foreground/60'>
-        An error occurred during submission
-      </p>
+      <p className='text-center text-muted-foreground/60'>An error occurred during submission</p>
       <div className='flex justify-center pt-4'>
         <Button onClick={() => router.back()} variant='link'>
           Back to Previous Page

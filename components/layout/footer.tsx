@@ -31,7 +31,7 @@ export default function Footer() {
       </ul>
       <div className='grid grid-cols-5'>
         <div className='col-span-2 flex items-center'>
-          <Link href='/'>
+          <Link href='/terms-of-service'>
             <p className='text-sm text-muted-foreground'>利用規約</p>
           </Link>
         </div>

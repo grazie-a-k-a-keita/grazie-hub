@@ -11,7 +11,7 @@ export default function SvgGrazie({ callback }: { callback?: () => void }) {
 
   return (
     <svg
-      className='size-96'
+      className='size-48 md:size-96'
       fill='none'
       height='52'
       id='my-svg'

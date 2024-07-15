@@ -46,8 +46,8 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
   return (
     <div className='grid grid-cols-5 gap-4'>
-      <div className='mt-16 flex justify-end'>
-        <div className='flex flex-col gap-4'>
+      <div className='mt-16 hidden justify-center sm:flex xl:justify-end'>
+        <div className='hidden flex-col gap-4 sm:flex'>
           <Button asChild size='icon' variant='ghost'>
             <a
               href={encodeURI(
@@ -70,7 +70,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
           </Button>
         </div>
       </div>
-      <article className='col-span-3'>
+      <article className='col-span-5 sm:col-span-3'>
         <div className='prose mx-auto my-8'>
           <div className='not-prose space-y-2 border-b pb-2'>
             <h1 className='pb-2 text-3xl font-bold'>{article.title}</h1>

@@ -11,7 +11,7 @@ export default async function Page() {
   if (!teamsOfService) return;
 
   return (
-    <section className='col-span-3 my-16'>
+    <section className='col-span-3 my-2 sm:my-6'>
       <div className='prose mx-auto my-8'>
         <div
           dangerouslySetInnerHTML={{

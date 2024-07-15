@@ -34,7 +34,7 @@ export default function Header() {
               <p className='text-lg font-bold text-primary'>Grazie</p>
             </Link>
           </Button>
-          <ul className='flex space-x-6'>
+          <ul className='hidden space-x-6 sm:flex'>
             <li className='flex items-center'>
               <p className='text-sm font-semibold'>
                 <Link className='transition duration-200 hover:opacity-60' href='/grazie'>
@@ -58,7 +58,7 @@ export default function Header() {
             </li>
           </ul>
         </div>
-        <div className='flex items-center'>
+        <div className='hidden items-center sm:flex'>
           <Button asChild variant='outline'>
             <Link href='/contact'>
               <Mails className='mr-2 size-6 text-secondary-foreground' />

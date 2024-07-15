@@ -36,7 +36,7 @@ export default function SearchSelect({
         handleSearch({ name, value });
       }}
     >
-      <SelectTrigger className='w-72'>
+      <SelectTrigger className='w-full max-w-64'>
         <SelectValue placeholder={placeholder} />
       </SelectTrigger>
       <SelectContent>

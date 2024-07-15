@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className='container sticky top-full border-t border-primary py-8'>
       <p className='mb-12 text-2xl font-bold'>Grazie</p>
-      <ul className='mb-8 grid grid-cols-5'>
+      <ul className='mb-8 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5'>
         <li className='flex items-center'>
           <Link className='transition duration-200 hover:opacity-60' href='/grazie'>
             <p className='text-sm font-semibold'>Grazieについて</p>
@@ -29,7 +29,7 @@ export default function Footer() {
           </Link>
         </li>
       </ul>
-      <div className='grid grid-cols-5'>
+      <div className='grid grid-cols-2 gap-4 sm:grid-cols-4 md:grid-cols-5'>
         <div className='col-span-2 flex items-center'>
           <Link href='/terms-of-service'>
             <p className='text-sm text-muted-foreground'>利用規約</p>

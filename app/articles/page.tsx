@@ -58,7 +58,7 @@ export default async function Page({
   return (
     <>
       <h1 className='my-8 text-4xl font-semibold'>ブログ一覧</h1>
-      <div className='mb-8 flex gap-4'>
+      <div className='mb-8 flex flex-col gap-4 sm:flex-row'>
         <SearchSelect
           name='category'
           placeholder='Select a category'
@@ -69,7 +69,7 @@ export default async function Page({
       {articles.length === 0 ? (
         <p>条件に一致する投稿がありません</p>
       ) : (
-        <div className='grid grid-cols-3 gap-4'>
+        <div className='mb-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
           {articles.map((article) => (
             <div
               className='group relative rounded-lg border bg-card p-4 text-card-foreground shadow transition duration-500 hover:shadow-md'

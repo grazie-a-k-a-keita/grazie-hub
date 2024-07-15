@@ -37,10 +37,10 @@ export default async function Home() {
           <h1
             className={cn(
               oswald.className,
-              'text-center text-9xl font-extrabold text-secondary select-none',
+              'text-center text-lg lg:text-9xl sm:text-6xl font-extrabold text-secondary select-none',
             )}
           >
-            Lorem ipsum dolor sit amet.
+            Lorem ipsum dolor sit.
           </h1>
         </div>
         <Image
@@ -74,7 +74,7 @@ export default async function Home() {
             </Link>
           </h2>
         </div>
-        <div className='grid grid-cols-3 gap-4'>
+        <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3'>
           {services.map((service) => (
             <div key={service.title}>
               <ImageCard
@@ -96,7 +96,7 @@ export default async function Home() {
             </Link>
           </h2>
         </div>
-        <div className='grid grid-cols-3 gap-4'>
+        <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3'>
           {articles.map((article) => (
             <div key={article.slug}>
               <ImageCard

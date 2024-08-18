@@ -1,4 +1,4 @@
-import { getURL } from '@/lib/utils';
+import { AppConfig } from '@/app.config';
 import type { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: `${getURL()}/sitemap.xml`,
+    sitemap: `${AppConfig.baseUrl}/sitemap.xml`,
   };
 }

@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   },
   description: AppConfig.description,
   metadataBase: new URL(AppConfig.baseUrl),
+  verification: {
+    google: 'WrixKoEfjuRBMfWSj8SGE01gpJ-zxESUvUHqkqWYn3E',
+  },
 };
 
 export default function RootLayout({

@@ -1,10 +1,10 @@
 'use client';
 
-import SvgGrazie from '@/components/svg-animation/svg-grazie';
+import SvgGrazie from '@/app/components/animation/svg-animation/svg-grazie';
 import { cn } from '@/lib/utils';
 import { useEffect, useState } from 'react';
 
-export default function Page() {
+export default function ClientPage() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {

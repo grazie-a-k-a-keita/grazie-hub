@@ -1,13 +1,15 @@
-import SearchSelect from '@/components/search-select';
+import PageTitle from '@/app/components/common/page-title';
+import SearchSelect from '@/app/components/common/search-select';
 import { Badge } from '@/components/ui/badge';
 import { getArticleBySearch, getArticles, getTags } from '@/lib/newt';
 import { format } from 'date-fns';
+import { ListOrdered } from 'lucide-react';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Blogs',
+  title: 'ブログ一覧',
 };
 
 async function getYears() {
@@ -57,7 +59,9 @@ export default async function Page({
 
   return (
     <>
-      <h1 className='my-8 text-4xl font-semibold'>ブログ一覧</h1>
+      <PageTitle titleName='ブログ一覧'>
+        <ListOrdered size={24} />
+      </PageTitle>
       <div className='mb-8 flex flex-col gap-4 sm:flex-row'>
         <SearchSelect
           name='category'

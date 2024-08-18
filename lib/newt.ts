@@ -1,7 +1,6 @@
 import type { Article } from '@/types/article';
 import type { Author } from '@/types/author';
 import type { Tag } from '@/types/tag';
-import type { TeamsOfService } from '@/types/teams-of-service';
 import { format } from 'date-fns';
 import { createClient } from 'newt-client-js';
 import { cache } from 'react';
@@ -99,18 +98,4 @@ export const getAuthorById = cache(async (id: string) => {
     },
   });
   return author;
-});
-
-/**
- * 利用規約を取得する
- */
-export const getTeamsOfService = cache(async () => {
-  const teamsOfService = await client.getFirstContent<TeamsOfService>({
-    appUid: 'document-site',
-    modelUid: 'terms-of-service',
-    query: {
-      select: ['title', 'body'],
-    },
-  });
-  return teamsOfService;
 });

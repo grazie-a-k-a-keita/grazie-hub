@@ -1,5 +1,5 @@
-import ImageCard from '@/components/image-card';
-import { oswald } from '@/lib/ftons';
+import ImageCard from '@/app/components/common/image-card';
+import { oswald } from '@/lib/fonts';
 import { getArticles } from '@/lib/newt';
 import { cn } from '@/lib/utils';
 import { format } from 'date-fns';

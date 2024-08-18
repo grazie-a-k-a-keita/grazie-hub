@@ -1,7 +1,7 @@
 import { AppConfig } from '@/app.config';
-import Footer from '@/components/layout/footer';
-import Header from '@/components/layout/header';
-import { NotoSansJp } from '@/lib/ftons';
+import Footer from '@/app/components/layout/footer';
+import Header from '@/app/components/layout/header';
+import { NotoSansJp } from '@/lib/fonts';
 import { cn } from '@/lib/utils';
 import type { Metadata } from 'next';
 import './globals.css';

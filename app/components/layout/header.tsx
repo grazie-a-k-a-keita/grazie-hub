@@ -30,7 +30,7 @@ export default function Header() {
         <div className='flex items-center'>
           <Button asChild className='mr-6' variant='ghost'>
             <Link href='/'>
-              <Image alt='logo' className='mr-2' height={24} src='/logo.png' width={24} />
+              <Image alt='logo' className='mr-2' height={24} src='/images/logo.png' width={24} />
               <p className='text-lg font-bold text-primary'>{AppConfig.title}</p>
             </Link>
           </Button>

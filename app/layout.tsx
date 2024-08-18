@@ -4,6 +4,7 @@ import Header from '@/app/components/layout/header';
 import { NotoSansJp } from '@/lib/fonts';
 import { cn } from '@/lib/utils';
 import type { Metadata } from 'next';
+import { getURL } from 'next/dist/shared/lib/utils';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
     default: AppConfig.title,
   },
   description: AppConfig.description,
+  metadataBase: new URL(getURL()),
 };
 
 export default function RootLayout({
